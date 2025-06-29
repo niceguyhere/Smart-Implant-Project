@@ -110,6 +110,10 @@ The doctor's PC-based application retrieves the data from the cloud server for a
 <img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/57.JPG" width="700"  height="350" />
 <br/>The effect of the aggregate testing C of each software module<br/>
 <img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/58.JPG" width="700"  height="350" />
+<br/>ECG data collection and storage (sampling rate 500 Hz)<br/>
+<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/59.png" width="700"  height="350" />
+<br/>Motion inertia state data acquisition and storage (sampling rate 25 Hz)<br/>
+<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/60.png" width="700"  height="350" />
 ### Android application Program Development
 
  <br/>The main program files are as follows:<br/>
