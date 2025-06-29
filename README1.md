@@ -1,7 +1,7 @@
 <br/>All code is continuously being completed.<br/>
  # software code and debugging
  <br/>This project involves the relevant programs for the ESP32C3 main controller, based on the ESP-IDF development environment, version 5.2.X，with C/C++ as the programming languages.<br/>
- <br/>The [independent test](https://github.com/niceguyhere/implant-project/tree/324827db6d8f012b63cf70fb948637aefa1a766b/independent%20test) folder contains independent test code for each hardware module.<br/>
+ <br/>The [Independent_test](https://github.com/niceguyhere/implant-project/tree/324827db6d8f012b63cf70fb948637aefa1a766b/independent%20test) folder contains independent test code for each hardware module.<br/>
   <br/>The [Aggregate_test (with OLED)](https://github.com/niceguyhere/implant-project/tree/866a74767bc9ba1479cc80033f2f2af7b9ec522f/Aggregate_test%20(with%20OLED)) folder contains independent test code for each hardware module.<br/>
 <br/>This Android application project is developed using the Android Studio development environment, with Java and XML as the programming languages, and Gradle version 7.1.2.<br/>
  <br/>The [Android_App](https://github.com/niceguyhere/implant-project/tree/531f5bd1666a707c1283273740adaec063e3c07c/Android_App) folder contains the Android App code .<br/>
