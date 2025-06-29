@@ -144,7 +144,7 @@ This paper analyses the calculation principles of key parameters related to wire
 <img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/13.png" width="700"  height="350" />
 <br/> Lithium battery protection circuit PCB 3D<br/>
 <img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/12.png" width="700"  height="350" /><br/>
-  &emsp;&emsp;<br/>The implant aggregation main board should include the following hardware modules:<br/>
+#### The implant aggregation main board should include the following hardware modules
  ESP32C3 main control circuit<br/>
  AD8232 ECG signal detection circuitry<br/>
  MPU6050 motion inertia state circuit<br/>
@@ -155,7 +155,6 @@ This paper analyses the calculation principles of key parameters related to wire
  Pacing pulse safety control circuit<br/>
  And related interfaces and pads<br/>
 <br/> The implant polymerization motherboard, whose circuit diagram is analyzed above, is drawn and completed as follows:
-
 <br/>  Circuit diagram of the implant polymerization motherboard<br/>
 <img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/35.png" width="700"  height="350" />
   <br/>Implant Aggregation Motherboard PCB Top<br/>
@@ -172,4 +171,4 @@ This paper analyses the calculation principles of key parameters related to wire
    &emsp;&emsp;And in the top layer of the PCB, I have reserved a blank space for the wireless charging receiver circuit board, currently close to graduation, time is limited, will be in the next few months, the wireless charging receiver circuit board is also integrated in the implant polymerization board, so that the implant only consists of the polymerization board, the battery, the receiver coil, the implant can be controlled within the overall thickness of 15mm.<br/>
    &emsp;&emsp;In the paper, we conducted extensive analysis and necessary calculations on all key details of the circuit design and component selection. Due to space limitations, we will not list them all here.<br/>
 <br/>
-#### Please refer to README1.md/README2.md for the software code and debugging section.
+#### Please refer to README1.md/README2.md for the software code and testing section.
