@@ -62,8 +62,8 @@
  <br/>&emsp;&emsp;2. Multi-Device Interference Testing: Perform normal transmission tests in an environment with more than 10 Bluetooth devices broadcasting to evaluate Monitor frequency conflict rates and implement adaptive frequency hopping to reduce interference.
  <br/>&emsp;&emsp;3. Latency Analysis: Measure time delays between data transmission and acknowledgment under varying device loads.
  <br/>Multiple tests on BLE via nRF connect <br/>
-<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/62.png" width="700"  height="350" />
-###  5.3.7Thermal Performance and Safety
+<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/62.png" width="350"  height="400" />
+### Thermal Performance and Safety
 &emsp;&emsp;  Goal: Ensure that the instrument maintains a safe temperature during prolonged use.
  <br/>&emsp;&emsp; Procedure:
 1. Test Environment:
@@ -73,11 +73,28 @@
 2. Temperature recording:
  <br/>&emsp;&emsp; Ambient room: an infrared camera with a resolution of 640x480 pixels and a sensitivity of 0.1°C was used to monitor the ambient room with the implanted device, with data recorded at 10-second intervals and collected over a 24-hour test period. The collected thermograms were analyzed to identify hot spots and assess the uniformity of heat dissipation on the device surface, as well as the temperature difference between operating and non-operating conditions.
  <br/>&emsp;&emsp; Thermostat: Logging via Android, data is recorded at 10-second intervals and temperature data received by Android is collected over a 24-hour test period.
-3. Stress test: All system functions (monitoring, communication and wireless charging) were enabled simultaneously to assess peak thermal loads. Data was captured using the same infrared camera and real-time thermal profiles were compared to baseline operating conditions to determine thermal stability. Heat accumulation rates and equilibration times were analyzed to understand thermal performance under extreme use.
-
-
-
-
-
-
-
+3. Stress test:
+<br/>&emsp;&emsp; All system functions (monitoring, communication and wireless charging) were enabled simultaneously to assess peak thermal loads. Data was captured using the same infrared camera and real-time thermal profiles were compared to baseline operating conditions to determine thermal stability. Heat accumulation rates and equilibration times were analyzed to understand thermal performance under extreme use.
+## Notable Observations
+ECG Noise Sensitivity:
+<br/>&emsp;&emsp;The AD8232 module is sensitive to high-frequency interference, especially from switching regulators and high-frequency power transmission. Adequate shielding and short wiring helped reduce noise.
+<br/>&emsp;&emsp;The wires of the ECG electrodes and the external NTC should be shielded signal wires, and the shielding layer should be grounded. At the same time, the circuit board should be shielded, and in order to reduce the electromagnetic radiation generated during wireless charging, the shielding cover should adopt a mesh structure.
+<br/>Be careful to shield<br/>
+<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/63.png" width="350"  height="400" />
+<br/>BLE Interference: 
+<br/>&emsp;&emsp;In an environment with many overlapping Wi-Fi channels (2.4 GHz band), occasional increases in packet loss to ~3–5% were noted. Adjusting the BLE channel or employing adaptive frequency hopping improved reliability.
+<br/>Calibration: 
+<br/>&emsp;&emsp;Each sensor performed best after a one-time calibration step—particularly the ADC-based battery measurement. This step is recommended in any final product to account for resistor tolerances and ADC offsets.(At the same time, the calibration library inside ESP-IDF should be used, which uses the 1100mV reference voltage inside ESP.)
+## Potential Improvements
+Biocompatibility: 
+<br/>&emsp;&emsp;Considering that WPT wireless power transmission technology will inevitably cause heating of metal parts, medical epoxy resin or medical silicone (metal is prohibited) should be used when selecting the shell package, and titanium or platinum should be selected for the electrode head. Due to the presence of a WPT receiving coil inside, more physical tests are needed to fully prove its safety (including the material of the electrode wire).
+<br/>Titanium Alloy Electrode<br/>
+<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/64.png" width="350"  height="400" />
+<br/>Thermal Safety:<br/>
+<br/>&emsp;&emsp;The safety of lithium rechargeable batteries within implants, as well as the thermal effects caused by wireless charging, require more extensive testing to verify that they meet the safety standards for implanted medical devices.
+<br/>Highly integrated circuit boards:<br/> 
+<br/>&emsp;&emsp;The hardware design in Chapter 3, except for the circuit board of the wireless charging module, has been fully integrated into a 4-layer PCB. In the case of the SD card data module, the chip-type SD NAND FLASH is used to further reduce the size. In the future, the wireless charging receiver circuit board can be completely polymerized together, so that there is only one circuit board inside the implant. The thickness of the implant can be greatly reduced, and the overall size can be controlled within 35mmx35mmx15mm. However, due to time constraints as graduation approached, this step was not realized.
+<br/> Package shaping:<br/>
+<br/>&emsp;&emsp; due to the need for wireless charging, this implant cannot use a metal shell; the shell should be shaped by 3D printing using medical polymer materials. The polymerized main board, wireless charging receiving circuit board and receiving coil, battery, in the order of the outermost coil-battery-wireless charging circuit board-main board, are put into the medical polymer shell, and then potted with medical silicone, while the gap at the electrode lead-in position is also sealed with silicone.
+<br/>Medical-grade potting silicone<br/>
+<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/65.png" width="350"  height="400" />
