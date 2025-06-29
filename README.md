@@ -23,7 +23,7 @@ l Transmitting coil: Transmits modulated wireless electrical energy.<br/>
 l User device: An Android application that displays real-time data, stores logs, and issues alerts.<br/>
 l Cloud service: Stores patient-related data, performs cloud computing and related intelligent analysis. Medical personnel access the cloud service for follow-up and manual analysis.<br/>
 Signal measurement and wireless transmission diagram
-
+![Signal measurement and wireless transmission diagram](https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/111.png)
 Schematic diagram of the smart pacemaker
 
 Schematic diagram of the internal structure of the implant
