@@ -97,4 +97,4 @@ Biocompatibility:
 <br/> Package shaping:
 <br/>&emsp;&emsp; due to the need for wireless charging, this implant cannot use a metal shell; the shell should be shaped by 3D printing using medical polymer materials. The polymerized main board, wireless charging receiving circuit board and receiving coil, battery, in the order of the outermost coil-battery-wireless charging circuit board-main board, are put into the medical polymer shell, and then potted with medical silicone, while the gap at the electrode lead-in position is also sealed with silicone.
 <br/>Medical-grade potting silicone<br/>
-<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/65.png" width="300"  height="350" />
+<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/65.png" width="350"  height="350" />
