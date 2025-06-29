@@ -1,2 +1,2 @@
 # Implant-Project
-A comprehensive system that combines BLE, WPT, complex signal processing algorithms, pacing pulse circuits, and network communication software.
+A prototype of a wired smart cardiac pacemaker with continuous monitoring functionality, featuring low-power Bluetooth communication and wireless charging capabilities.
