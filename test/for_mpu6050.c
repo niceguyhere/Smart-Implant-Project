@@ -191,4 +191,69 @@ static void convert_to_physical_units(const mpu6050_data_t *raw_data,
     accel_g[1] = (float)raw_data->accel_y / 16384.0f;
     accel_g[2] = (float)raw_data->accel_z / 16384.0f;
     
-    // Convert gyroscope data
+    // Convert gyroscope data to degrees per second (±250°/s range, 16-bit)
+    gyro_dps[0] = (float)raw_data->gyro_x / 131.0f;
+    gyro_dps[1] = (float)raw_data->gyro_y / 131.0f;
+    gyro_dps[2] = (float)raw_data->gyro_z / 131.0f;
+    
+    // Convert temperature to Celsius
+    *temp_c = (float)raw_data->temp / 340.0f + 36.53f;
+}
+
+// Main task for reading and displaying MPU6050 data
+static void mpu6050_task(void *pvParameters)
+{
+    mpu6050_data_t raw_data;
+    float accel_g[3];
+    float gyro_dps[3];
+    float temp_c;
+    
+    ESP_LOGI(TAG, "Starting MPU6050 data reading task");
+    ESP_LOGI(TAG, "Sample rate: 10Hz");
+    ESP_LOGI(TAG, "Accelerometer range: ±2g");
+    ESP_LOGI(TAG, "Gyroscope range: ±250°/s");
+    ESP_LOGI(TAG, "Format: Accel(g) | Gyro(°/s) | Temp(°C)");
+    
+    while (1) {
+        // Read sensor data
+        esp_err_t ret = mpu6050_read_all_data(&raw_data);
+        if (ret == ESP_OK) {
+            // Convert to physical units
+            convert_to_physical_units(&raw_data, accel_g, gyro_dps, &temp_c);
+            
+            // Print formatted data
+            printf("Accel: X:%7.3f Y:%7.3f Z:%7.3f | Gyro: X:%8.2f Y:%8.2f Z:%8.2f | Temp: %6.2f°C\n",
+                   accel_g[0], accel_g[1], accel_g[2],
+                   gyro_dps[0], gyro_dps[1], gyro_dps[2],
+                   temp_c);
+        } else {
+            ESP_LOGE(TAG, "Failed to read MPU6050 data: %s", esp_err_to_name(ret));
+        }
+        
+        // Wait 100ms for 10Hz sampling rate
+        vTaskDelay(pdMS_TO_TICKS(100));
+    }
+}
+
+void app_main(void)
+{
+    ESP_LOGI(TAG, "ESP32-C3 MPU6050 I2C Reader Started");
+    
+    // Initialize I2C
+    esp_err_t ret = i2c_master_init();
+    if (ret != ESP_OK) {
+        ESP_LOGE(TAG, "I2C initialization failed: %s", esp_err_to_name(ret));
+        return;
+    }
+    ESP_LOGI(TAG, "I2C master initialized");
+    
+    // Initialize MPU6050
+    ret = mpu6050_init();
+    if (ret != ESP_OK) {
+        ESP_LOGE(TAG, "MPU6050 initialization failed: %s", esp_err_to_name(ret));
+        return;
+    }
+    
+    // Create task for reading MPU6050 data
+    xTaskCreate(mpu6050_task, "mpu6050_task", 4096, NULL, 5, NULL);
+}
