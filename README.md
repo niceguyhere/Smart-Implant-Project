@@ -155,14 +155,14 @@ This paper analyses the calculation principles of key parameters related to wire
 <br/>  Circuit diagram of the implant polymerization motherboard<br/>
 
   <br/>Implant Aggregation Motherboard PCB Top<br/>
-
+<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/11.png" width="700"  height="350" />
   <br/>Implant Polymerization Motherboard PCB Inside A<br/>
-
+<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/9.png" width="700"  height="350" />
  <br/> Implant Polymerization Motherboard PCB Inner Layer B<br/>
-
+<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/10.png" width="700"  height="350" />
  <br/> Implant Polymerization Motherboard PCB Bottom<br/>
-
+<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/8.png" width="700"  height="350" />
   <br/>3D image of finished implant PCB circuit board<br/>
-
+<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/7.png" width="700"  height="350" />
     &emsp;&emsp;This polymerization motherboard PCB is conceived and designed in full accordance with the above analysis, and it fully meets the due standards and requirements, and passes the automatic DRC test according to the industry default standard.
    &emsp;&emsp;And in the top layer of the PCB, I have reserved a blank space for the wireless charging receiver circuit board, currently close to graduation, time is limited, will be in the next few months, the wireless charging receiver circuit board is also integrated in the implant polymerization board, so that the implant only consists of the polymerization board, the battery, the receiver coil, the implant can be controlled within the overall thickness of 15mm.
