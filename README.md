@@ -1,5 +1,8 @@
 # Smart-Implant-Project
 A prototype of a wired smart cardiac pacemaker with continuous monitoring functionality, featuring low-power Bluetooth communication and wireless charging capabilities.
+<br/>[Hardware part]<br/>(https://github.com/niceguyhere/Smart-Implant-Project/edit/master/README.md)
+<br/>[Software part]<br/>(https://github.com/niceguyhere/Smart-Implant-Project/blob/master/README1.md)
+<br/>[Test part]<br/>(https://github.com/niceguyhere/Smart-Implant-Project/blob/master/README2.md)
 ## The overall objective of this intelligent cardiac pacemaker system is:
 1.Real-time, high-precision, and highly sensitive monitoring of the patient's ECG, motion inertial status, internal temperature of the implantable device, external electrode temperature, and battery voltage.<br/>
 2.Upon detecting bradycardia, the device delivers a pacing pulse current within an extremely short timeframe to initiate pacing.<br/>
