@@ -23,11 +23,11 @@ l Transmitting coil: Transmits modulated wireless electrical energy.<br/>
 l User device: An Android application that displays real-time data, stores logs, and issues alerts.<br/>
 l Cloud service: Stores patient-related data, performs cloud computing and related intelligent analysis. Medical personnel access the cloud service for follow-up and manual analysis.<br/>
 <br/>Signal measurement and wireless transmission diagram<br/>
-<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/111.png" width="700"  height="400" />
+<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/111.png" width="700"  height="350" />
 <br/>Schematic diagram of the smart pacemaker<br/>
-<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/333.png" width="700"  height="400" />
+<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/333.png" width="700"  height="350" />
 <br/>Schematic diagram of the internal structure of the implant<br/>
-<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/222.png" width="700"  height="400" />
+<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/222.png" width="700"  height="350" />
 ## Main Components of the Hardware Module
 l ECG32C3 Microcontroller Main Control Module <br/>
 l AD8232 ECG Detection Module<br/>
@@ -40,50 +40,50 @@ l Wireless Charging and Control Module<br/>
 <br/>Complete Circuit Schematic<br/>
 
 <br/>PCB finished drawing<br/>
-<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/31.png" width="700"  height="400" />
+<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/31.png" width="700"  height="350" />
 <br/>PCB 3D<br/>
-<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/30.png" width="700"  height="400" />
+<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/30.png" width="700"  height="350" />
 ### AD8232 ECG Detection Module Design
 <br/>Complete Circuit Schematic<br/>
 
 <br/>PCB finished drawing<br/>
-<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/29.png" width="700"  height="400" />
+<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/29.png" width="700"  height="350" />
 <br/>PCB 3D<br/>
-<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/28.png" width="700"  height="400" />
+<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/28.png" width="700"  height="350" />
 ### MPU6050 Inertial Motion State Detection Module Design
 <br/>Complete Circuit Schematic<br/>
 
 <br/>PCB finished drawing<br/>
-<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/27.png" width="700"  height="400" />
+<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/27.png" width="700"  height="350" />
 <br/>PCB 3D<br/>
-<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/26.png" width="700"  height="400" />
+<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/26.png" width="700"  height="350" />
 ### SD card external memory module design
 Complete Circuit Schematic<br/>
 
 <br/>PCB finished drawing<br/>
 <img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/25.png" width="700"  height="200" />
 <br/>PCB 3D<br/>
-<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/24.png" width="700"  height="400" />
+<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/24.png" width="700"  height="350" />
 ### NTC External Temperature Detection Module Design
 <br/>Complete Circuit Schematic<br/>
-<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/23.png" width="700"  height="400" />
+<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/23.png" width="700"  height="350" />
 ### Battery Voltage Detection Module Design
 <br/>Complete Circuit Schematic<br/>
-<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/22.png" width="700"  height="400" />
+<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/22.png" width="700"  height="350" />
 ### Testing of circuit boards for various hardware modules
 Write programs to run on the ESP and perform functional verification tests on each pin module.
 <br/>AD8232 test result output<br/>
-<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/33.JPG" width="700"  height="400" />
+<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/33.JPG" width="700"  height="350" />
 <br/>MPU6050 test result output<br/>
-<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/20.png" width="700"  height="400" />
+<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/20.png" width="700"  height="350" />
 <br/>SDcard External Storage Module Test Wiring Diagram<br/>
-<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/19.png" width="700"  height="400" />
+<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/19.png" width="700"  height="350" />
 <br/>SDcard external storage module test result diagram A<br/>
-<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/18.png" width="700"  height="400" />
+<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/18.png" width="700"  height="350" />
 <br/>SDcard External Storage Module Test Results Diagram B<br/>
-<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/17.png" width="700"  height="400" />
+<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/17.png" width="700"  height="350" />
 <br/>All module aggregation test results<br/>
-<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/34.JPG" width="700"  height="400" />
+<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/34.JPG" width="700"  height="350" />
 ### Wireless charging module
 This paper analyses the calculation principles of key parameters related to wireless charging, including topological structures, inverter modes, coils, and resonant frequencies, and conducts simulation tests using MATLAB Simulink. However, due to the war, it is difficult to purchase materials, and no physical tests have been conducted yet.
 <br/>LCC-S compensation topology<br/>
