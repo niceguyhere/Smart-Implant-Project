@@ -22,11 +22,11 @@ l Transmitting power regulation module: Converts the constant voltage source cur
 l Transmitting coil: Transmits modulated wireless electrical energy.<br/>
 l User device: An Android application that displays real-time data, stores logs, and issues alerts.<br/>
 l Cloud service: Stores patient-related data, performs cloud computing and related intelligent analysis. Medical personnel access the cloud service for follow-up and manual analysis.<br/>
-    Signal measurement and wireless transmission diagram
+Signal measurement and wireless transmission diagram
 
-    Schematic diagram of the smart pacemaker
+Schematic diagram of the smart pacemaker
 
-    Schematic diagram of the internal structure of the implant
+Schematic diagram of the internal structure of the implant
 
 ## Main Components of the Hardware Module
 l ECG32C3 Microcontroller Main Control Module <br/>
@@ -88,14 +88,78 @@ LCC-S compensation topology
 Wireless charging Matlab Simulink simulation test
 
 ### Wireless charging control design
-Due to the possible temperature rise caused by wireless charging, the temperature of the implant must be strictly monitored and controlled to ensure safety.<br/>
-One temperature sensor (within MPU6050) and the NTC of the external electrode on board of the main control of the implant, a total of 3 sets of temperature values are collected by the main control in real time and can be transmitted to the patient's cell phone terminal. Therefore, during wireless charging, it must be controlled through the cell phone terminal, and the charging transmitter is allowed to operate only when all 3 sets of temperatures are within the safe range value (40°C).<br/>
-    To do this, a relay can be designed to turn on and off the 12V DC input of the transmitter, and the relay signal is controlled by the signal output from another ESP32C3 development board, which interacts with the cell phone APP through the serial port via the USB cable.<br/>
- This design can realize the wireless charging when the three sets of temperature values are normal, during the process of the cell phone app to monitor the temperature is abnormal, immediately through the serial port to send commands to stop charging.<br/>
+&emsp;&emsp;Due to the possible temperature rise caused by wireless charging, the temperature of the implant must be strictly monitored and controlled to ensure safety.<br/>
+&emsp;&emsp;One temperature sensor (within MPU6050) and the NTC of the external electrode on board of the main control of the implant, a total of 3 sets of temperature values are collected by the main control in real time and can be transmitted to the patient's cell phone terminal. Therefore, during wireless charging, it must be controlled through the cell phone terminal, and the charging transmitter is allowed to operate only when all 3 sets of temperatures are within the safe range value (40°C).<br/>
+&emsp;&emsp;To do this, a relay can be designed to turn on and off the 12V DC input of the transmitter, and the relay signal is controlled by the signal output from another ESP32C3 development board, which interacts with the cell phone APP through the serial port via the USB cable.<br/>
+&emsp;&emsp;This design can realize the wireless charging when the three sets of temperature values are normal, during the process of the cell phone app to monitor the temperature is abnormal, immediately through the serial port to send commands to stop charging.<br/>
 Wireless charging control circuit schematic diagram
 
- Wireless charging control circuit PCB design (front)
+Wireless charging control circuit PCB design (front)
 
- Wireless Charging Control Circuit PCB Design Diagram (Reverse)
+Wireless Charging Control Circuit PCB Design Diagram (Reverse)
 
- Wireless charging control circuit board 3D drawing
+Wireless charging control circuit board 3D drawing
+
+Wireless charging control schematic diagram
+
+### Pacing pulse constant current circuit module
+ &emsp;&emsp;This module is an experimental exploration of a simple pulse constant current generation circuit, based on the above hardware, add a control circuit and constant current generation circuit, through the intelligent master control to detect sinus bradycardia, to real-time output of a typical pulse constant current, and strictly control the pulse time of microseconds.<br/>
+ &emsp;&emsp;This project only explores a kind of experimental pacing pulse constant current generation design, the relevant parameters are in line with the characteristics of pacing current, but to be used in human beings, its safety and so on need to be explored rigorously.<br/>
+ AD8232 ECG Detection Module Improvement Diagram
+
+ Pulse Pacing Safety Circuit A
+
+ Pulse Pacing Safety Circuit B
+  
+ &emsp;&emsp;The AD8232 ECG detection circuit and pacemaker pulse generator circuit have been improved and integrated, while strictly adhering to safety requirements, and the following safety functions have been achieved:
+1. Leakage current at both ends of the electrode is almost 0, much less than the international standard of 10uA. and the electrode has been kept connected under normal conditions, normal overcurrent ECG signal, no distortion and no significant attenuation. The selection of all components strictly consider the overcurrent and voltage, and try to miniaturize (0402), using high precision (1%), the board size increase is not obvious.<br/>
+2. When sinus bradycardia is detected, the pacing pulse generator circuit outputs a constant current pulse of 5mA. The pacing pulse circuit chip is overvoltage protected and self clamps when it exceeds 5V. When there is an extreme internal failure, when the voltage is greater than 7.2V, the pacing generator circuit TVS will break down, blowing the disposable SMD fuse, and there will be no more output from the pulse constant current circuit.<br/>
+3. The AD8232 cardiac detection circuit can safely clamp large voltage pulses of up to 500V at the electrodes.<br/>
+4. The large voltage withstand diode at the LA electrode of the pacing pulse circuit can effectively block the external large voltage pulse.<br/>
+5. The RA electrode of the pacing pulse circuit has two voltage divider circuits and a high-speed comparator, so that when a potential of 6V is detected at the LA electrode, the path from the LA electrode to the pacing pulse circuit is immediately cut off by a MOS tube.<br/>
+ &emsp;&emsp;A comprehensive analysis and effective estimation of the action delay and shutdown delay of the pacemaker pulse generator circuit were performed. The delays are fully compliant with the system design objectives and have minimal impact on related functions. Subsequent testing can be conducted by simulating pacemaker pulses and performing animal experiments, using an oscilloscope to test the electrocardiogram signals and safety, including response time.<br/>
+### Hardware Module Fusion Design
+   &emsp;&emsp;The first thing that can be determined is that the following modules can be well integrated together:
+ ESP32C3 master control circuit module<br/>
+ AD8232 ECG signal detection circuit module<br/>
+ MPU6050 inertial motion detection circuit module<br/>
+ NTC external temperature detection circuit module<br/>
+ Battery voltage detection circuit module<br/>
+ Data storage module<br/>
+
+ Improvements to SDNAND storage module circuits
+
+ Lithium battery protection circuit
+
+ Lithium Battery Protection Circuit PCB Front Side
+
+ Lithium Battery Protection Circuit PCB Rear Side
+
+ Lithium battery protection circuit PCB 3D
+
+  &emsp;&emsp;The implant aggregation main board should include the following hardware modules:
+ ESP32C3 main control circuit
+ AD8232 ECG signal detection circuitry
+ MPU6050 motion inertia state circuit
+ External NTC detection circuit
+ Battery voltage detection circuit
+ SDNand storage circuit
+ Pacing Pulse Generation Circuit
+ Pacing pulse safety control circuit
+ And related interfaces and pads
+ The implant polymerization motherboard, whose circuit diagram is analyzed above, is drawn and completed as follows:
+
+  Circuit diagram of the implant polymerization motherboard
+
+  Implant Aggregation Motherboard PCB Top
+
+  Implant Polymerization Motherboard PCB Inside A
+
+  Implant Polymerization Motherboard PCB Inner Layer B
+
+  Implant Polymerization Motherboard PCB Bottom
+
+  3D image of finished implant PCB circuit board
+
+    &emsp;&emsp;This polymerization motherboard PCB is conceived and designed in full accordance with the above analysis, and it fully meets the due standards and requirements, and passes the automatic DRC test according to the industry default standard.
+   &emsp;&emsp;And in the top layer of the PCB, I have reserved a blank space for the wireless charging receiver circuit board, currently close to graduation, time is limited, will be in the next few months, the wireless charging receiver circuit board is also integrated in the implant polymerization board, so that the implant only consists of the polymerization board, the battery, the receiver coil, the implant can be controlled within the overall thickness of 15mm.
