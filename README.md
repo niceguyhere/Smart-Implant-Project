@@ -1,6 +1,6 @@
 # Smart-Implant-Project
 A prototype of a wired smart cardiac pacemaker with continuous monitoring functionality, featuring low-power Bluetooth communication and wireless charging capabilities.
-<br/>[Hardware part]<br/>(https://github.com/niceguyhere/Smart-Implant-Project/edit/master/README.md)
+<br/>[Hardware part]<br/>(https://github.com/niceguyhere/Smart-Implant-Project/blob/master/README.md)
 <br/>[Software part]<br/>(https://github.com/niceguyhere/Smart-Implant-Project/blob/master/README1.md)
 <br/>[Test part]<br/>(https://github.com/niceguyhere/Smart-Implant-Project/blob/master/README2.md)
 ## The overall objective of this intelligent cardiac pacemaker system is:
