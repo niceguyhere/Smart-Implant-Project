@@ -17,7 +17,7 @@ The doctor's PC-based application retrieves the data from the cloud server for a
 <img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/46.png" width="700"  height="350" />
 <br/>ESP32C3 main control wiring diagram<br/>
 <img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/47.png" width="700"  height="350" />
-### ESP32 Program Module Development
+### ESP32 Program Development
 <br/>The ESP32 program is located in folder ESP32C3_MAIN, and the relevant code is still being refined.<br/>
 <br/>Program development principle:<br/>
  <br/>&emsp;&emsp;This program development is carried out by modular code, ESP-IDF development is based on C/C++ programming, we can write the configuration code of the related modules in special .c and .h files, which is convenient for the main.c file to call. Pay attention to three development principles:
@@ -97,3 +97,36 @@ The doctor's PC-based application retrieves the data from the cloud server for a
 <br/>&emsp;&emsp;Coordinate the work of each module
 <br/>&emsp;&emsp;Create tasks
 <br/>&emsp;&emsp;Configure timer to realize accurate sampling
+<br/>SDcard Write effect diagram<br/>
+
+<br/>Bluetooth time synchronization effect<br/>
+<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/49.png" width="700"  height="350" />
+<br/>The effect of the aggregate testing of each software module<br/>
+<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/56.png" width="700"  height="350" />
+### Android application Program Development
+
+ <br/>The main program files are as follows:<br/>
+ <br/>MainActivity.java - the main program file, which handles BLE communication and main logic
+ <br/>EcgActivity.java - responsible for processing and visualizing the received ECG data
+ <br/>OtherSensorsData.java - conversion processing and visualization of data other than ECGs
+ <br/>FileLogger.java - logging errors and exceptions to a txt file for debugging purposes.
+ <br/>WirelessChargingController.java--Wireless charging control module, sends commands to USB serial port through temperature monitoring.
+ <br/>DataCloudService.java - historical data acquisition and upload module
+
+  <br/>Android & ESP32C3 BLE linkage test <br/>
+<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/50.png" width="700"  height="350" />
+ <br/>BLE test chart on Android side<br/>
+<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/55.png" width="700"  height="350" />
+ <br/>Real-time monitoring test on Android side<br/>
+<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/51.png" width="300"  height="450" />
+ <br/>Logging test on the Android side<br/>
+<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/52.png" width="700"  height="350" />
+### Cloud Program Development
+<br/>&emsp;&emsp;1.The cloud infrastructure should come with a database to write the data uploaded from the Android side to the database for use.
+<br/>&emsp;&emsp;2.It should be able to provide UI web pages for external access and visualization and intelligent analysis of physiological data.
+<br/>&emsp;&emsp;3.There is a user login interface, ECG waveforms and other visualization UI interface design should be simple and efficient.
+<br/>The cloud code is still being improved and will be updated in the future.
+<br/>Cloud UI Effect A<br/>
+<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/53.png" width="700"  height="350" />
+<br/>Cloud UI Effect B<br/>
+<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/54.png" width="700"  height="350" />
