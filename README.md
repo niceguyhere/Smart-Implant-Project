@@ -38,28 +38,28 @@ l Battery Voltage Detection Module<br/>
 l Wireless Charging and Control Module<br/>
 ### Design of the ECG32C3 microcontroller master module
 <br/>Complete Circuit Schematic<br/>
-
+<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/39.png" width="700"  height="350" />
 <br/>PCB finished drawing<br/>
 <img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/31.png" width="700"  height="350" />
 <br/>PCB 3D<br/>
 <img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/30.png" width="700"  height="350" />
 ### AD8232 ECG Detection Module Design
 <br/>Complete Circuit Schematic<br/>
-
+<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/42.png" width="700"  height="350" />
 <br/>PCB finished drawing<br/>
 <img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/29.png" width="700"  height="350" />
 <br/>PCB 3D<br/>
 <img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/28.png" width="700"  height="350" />
 ### MPU6050 Inertial Motion State Detection Module Design
 <br/>Complete Circuit Schematic<br/>
-
+<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/44.png" width="700"  height="350" />
 <br/>PCB finished drawing<br/>
 <img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/27.png" width="700"  height="350" />
 <br/>PCB 3D<br/>
 <img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/26.png" width="700"  height="350" />
 ### SD card external memory module design
 Complete Circuit Schematic<br/>
-
+<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/45.png" width="700"  height="350" />
 <br/>PCB finished drawing<br/>
 <img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/25.png" width="700"  height="200" />
 <br/>PCB 3D<br/>
@@ -96,7 +96,7 @@ This paper analyses the calculation principles of key parameters related to wire
 &emsp;&emsp;To do this, a relay can be designed to turn on and off the 12V DC input of the transmitter, and the relay signal is controlled by the signal output from another ESP32C3 development board, which interacts with the cell phone APP through the serial port via the USB cable.<br/>
 &emsp;&emsp;This design can realize the wireless charging when the three sets of temperature values are normal, during the process of the cell phone app to monitor the temperature is abnormal, immediately through the serial port to send commands to stop charging.<br/>
 <br/>Wireless charging control circuit schematic diagram<br/>
-
+<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/38.png" width="700"  height="350" />
 <br/>Wireless charging control circuit PCB design (front)<br/>
 <img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/4.png" width="700"  height="350" />
 <br/>Wireless Charging Control Circuit PCB Design Diagram (Reverse)<br/>
@@ -109,11 +109,11 @@ This paper analyses the calculation principles of key parameters related to wire
  &emsp;&emsp;This module is an experimental exploration of a simple pulse constant current generation circuit, based on the above hardware, add a control circuit and constant current generation circuit, through the intelligent master control to detect sinus bradycardia, to real-time output of a typical pulse constant current, and strictly control the pulse time of microseconds.<br/>
  &emsp;&emsp;This project only explores a kind of experimental pacing pulse constant current generation design, the relevant parameters are in line with the characteristics of pacing current, but to be used in human beings, its safety and so on need to be explored rigorously.<br/>
  <br/>AD8232 ECG Detection Module Improvement Diagram<br/>
-
+<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/43.png" width="700"  height="350" />
  <br/>Pulse Pacing Safety Circuit A<br/>
-
+<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/40.png" width="700"  height="350" />
 <br/>Pulse Pacing Safety Circuit B<br/>
-  
+  <img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/41.png" width="700"  height="350" />
  &emsp;&emsp;The AD8232 ECG detection circuit and pacemaker pulse generator circuit have been improved and integrated, while strictly adhering to safety requirements, and the following safety functions have been achieved:
 1. Leakage current at both ends of the electrode is almost 0, much less than the international standard of 10uA. and the electrode has been kept connected under normal conditions, normal overcurrent ECG signal, no distortion and no significant attenuation. The selection of all components strictly consider the overcurrent and voltage, and try to miniaturize (0402), using high precision (1%), the board size increase is not obvious.<br/>
 2. When sinus bradycardia is detected, the pacing pulse generator circuit outputs a constant current pulse of 5mA. The pacing pulse circuit chip is overvoltage protected and self clamps when it exceeds 5V. When there is an extreme internal failure, when the voltage is greater than 7.2V, the pacing generator circuit TVS will break down, blowing the disposable SMD fuse, and there will be no more output from the pulse constant current circuit.<br/>
@@ -131,9 +131,9 @@ This paper analyses the calculation principles of key parameters related to wire
  Data storage module<br/>
 
  <br/>Improvements to SDNAND storage module circuits<br/>
-
+<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/37.png" width="700"  height="350" />
 <br/> Lithium battery protection circuit<br/>
-
+<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/36.png" width="700"  height="350" />
 <br/> Lithium Battery Protection Circuit PCB Front Side<br/>
 <img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/14.png" width="700"  height="350" />
  <br/>Lithium Battery Protection Circuit PCB Rear Side<br/>
@@ -153,7 +153,7 @@ This paper analyses the calculation principles of key parameters related to wire
  The implant polymerization motherboard, whose circuit diagram is analyzed above, is drawn and completed as follows:
 
 <br/>  Circuit diagram of the implant polymerization motherboard<br/>
-
+<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/35.png" width="700"  height="350" />
   <br/>Implant Aggregation Motherboard PCB Top<br/>
 <img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/11.png" width="600"  height="400" />
   <br/>Implant Polymerization Motherboard PCB Inside A<br/>
