@@ -1,4 +1,4 @@
-# Implant-Project
+# Smart-Implant-Project
 A prototype of a wired smart cardiac pacemaker with continuous monitoring functionality, featuring low-power Bluetooth communication and wireless charging capabilities.
 ## The overall objective of this intelligent cardiac pacemaker system is:
 1.Real-time, high-precision, and highly sensitive monitoring of the patient's ECG, motion inertial status, internal temperature of the implantable device, external electrode temperature, and battery voltage.<br/>
