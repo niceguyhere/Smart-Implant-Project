@@ -80,7 +80,7 @@ ECG Noise Sensitivity:
 <br/>&emsp;&emsp;The AD8232 module is sensitive to high-frequency interference, especially from switching regulators and high-frequency power transmission. Adequate shielding and short wiring helped reduce noise.
 <br/>&emsp;&emsp;The wires of the ECG electrodes and the external NTC should be shielded signal wires, and the shielding layer should be grounded. At the same time, the circuit board should be shielded, and in order to reduce the electromagnetic radiation generated during wireless charging, the shielding cover should adopt a mesh structure.
 <br/>Be careful to shield<br/>
-<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/63.png" width="700"  height="350" />
+<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/63.png" width="600"  height="350" />
 <br/>BLE Interference: 
 <br/>&emsp;&emsp;In an environment with many overlapping Wi-Fi channels (2.4 GHz band), occasional increases in packet loss to ~3–5% were noted. Adjusting the BLE channel or employing adaptive frequency hopping improved reliability.
 <br/>Calibration: 
@@ -89,7 +89,7 @@ ECG Noise Sensitivity:
 Biocompatibility: 
 <br/>&emsp;&emsp;Considering that WPT wireless power transmission technology will inevitably cause heating of metal parts, medical epoxy resin or medical silicone (metal is prohibited) should be used when selecting the shell package, and titanium or platinum should be selected for the electrode head. Due to the presence of a WPT receiving coil inside, more physical tests are needed to fully prove its safety (including the material of the electrode wire).
 <br/>Titanium Alloy Electrode<br/>
-<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/64.png" width="700"  height="350" />
+<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/64.png" width="600"  height="350" />
 <br/>Thermal Safety:
 <br/>&emsp;&emsp;The safety of lithium rechargeable batteries within implants, as well as the thermal effects caused by wireless charging, require more extensive testing to verify that they meet the safety standards for implanted medical devices.
 <br/>Highly integrated circuit boards:
@@ -97,4 +97,4 @@ Biocompatibility:
 <br/> Package shaping:
 <br/>&emsp;&emsp; due to the need for wireless charging, this implant cannot use a metal shell; the shell should be shaped by 3D printing using medical polymer materials. The polymerized main board, wireless charging receiving circuit board and receiving coil, battery, in the order of the outermost coil-battery-wireless charging circuit board-main board, are put into the medical polymer shell, and then potted with medical silicone, while the gap at the electrode lead-in position is also sealed with silicone.
 <br/>Medical-grade potting silicone<br/>
-<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/65.png" width="700"  height="350" />
+<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/65.png" width="600"  height="350" />
