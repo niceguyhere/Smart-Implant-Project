@@ -143,7 +143,7 @@ This paper analyses the calculation principles of key parameters related to wire
  <br/>Lithium Battery Protection Circuit PCB Rear Side<br/>
 <img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/13.png" width="700"  height="350" />
 <br/> Lithium battery protection circuit PCB 3D<br/>
-<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/12.png" width="700"  height="350" />
+<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/12.png" width="700"  height="350" /><br/>
   &emsp;&emsp;<br/>The implant aggregation main board should include the following hardware modules:<br/>
  ESP32C3 main control circuit<br/>
  AD8232 ECG signal detection circuitry<br/>
