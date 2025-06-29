@@ -1,5 +1,5 @@
 # Testing
- <br/><br/>
+ <br/>Due to time constraints and limited experimental conditions, only part of the actual testing has been completed. All the general steps and directions will now be described.<br/>
 ##  Test Bench Instruments
 <br/>&emsp;&emsp;1.Life Signs Simulator (FLUKE Prosim 8p): To feed controlled ECG-like signals (1 mV amplitude with 1 Hz to 2 Hz frequency typical of heart signals, plus superimposed noise).
 <br/>&emsp;&emsp;2.Digital Multimeter(FLUKE F18B): To measure battery voltage and confirm ADC readings.
