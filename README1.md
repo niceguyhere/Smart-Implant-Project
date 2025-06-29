@@ -106,7 +106,7 @@ The doctor's PC-based application retrieves the data from the cloud server for a
 <br/>The effect of the aggregate testing B of each software module<br/>
 <img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/57.JPG" width="700"  height="350" />
 <br/>The effect of the aggregate testing C of each software module<br/>
-<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/58.JGP" width="700"  height="350" />
+<img src="https://raw.githubusercontent.com/niceguyhere/implant-project/refs/heads/master/image/58.JPG" width="700"  height="350" />
 ### Android application Program Development
 
  <br/>The main program files are as follows:<br/>
