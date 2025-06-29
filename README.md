@@ -168,4 +168,4 @@ This paper analyses the calculation principles of key parameters related to wire
    &emsp;&emsp;And in the top layer of the PCB, I have reserved a blank space for the wireless charging receiver circuit board, currently close to graduation, time is limited, will be in the next few months, the wireless charging receiver circuit board is also integrated in the implant polymerization board, so that the implant only consists of the polymerization board, the battery, the receiver coil, the implant can be controlled within the overall thickness of 15mm.<br/>
    &emsp;&emsp;In the paper, we conducted extensive analysis and necessary calculations on all key details of the circuit design and component selection. Due to space limitations, we will not list them all here.<br/>
 <br/>
-#### Please refer to readme1.md for the software code and debugging section.
+#### Please refer to README1.md/README2.md for the software code and debugging section.
