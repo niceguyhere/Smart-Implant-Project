@@ -1,4 +1,4 @@
-<br/>All codes are continuously being completed.<br/>
+<br/>All codes are continuously being completed...<br/>
  # software code and debugging
  <br/>This project involves the relevant programs for the ESP32C3 main controller, based on the ESP-IDF development environment, version 5.2.X，with C/C++ as the programming languages.<br/>
  <br/>The [Independent_test](https://github.com/niceguyhere/implant-project/tree/324827db6d8f012b63cf70fb948637aefa1a766b/independent%20test) folder contains independent test code for each hardware module.<br/>
