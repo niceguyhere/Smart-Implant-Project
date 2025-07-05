@@ -5,7 +5,7 @@
   <br/>The [Aggregate_test (with OLED)](https://github.com/niceguyhere/Smart-Implant-Project/tree/786ce7cf21c5ec3bff3aa310067906a7050e0967/Aggregate_test%20(with%20OLED)) folder contains Aggregate test codes for each hardware module.<br/>
  <br/>The [ESP32C3_MAIN](https://github.com/niceguyhere/implant-project/tree/master/ESP32C3_MAIN) folder contains ESP32C3 main board codes for the system.<br/>
 <br/>This Android application project is developed using the Android Studio development environment, with Java and XML as the programming languages, and Gradle version 7.1.2.<br/>
- <br/>The [Android_App](https://github.com/niceguyhere/Android_App) folder contains the Android App code .<br/>
+ <br/>The [Android_App](https://github.com/niceguyhere/Android_App) folder contains the Android App codes.<br/>
  
  ## The software component of the project consists of three main parts:
 <br/> 1. firmware: runs on a microcontroller (ESP32C3 development board) and is used to capture, process, store and transmit data (ECG, temperature, battery voltage and accelerometer readings).
